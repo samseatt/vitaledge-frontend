@@ -1,0 +1,96 @@
+/* src/styles/GenomicDetails.css */
+
+/* Container styling */
+.genomic-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Back link styling */
+.back-link {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--link-hover-color);
+}
+
+/* List of rsIDs */
+.rsid-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rsid-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rsid-item span {
+  flex-grow: 1;
+  color: #333;
+}
+
+/* Button styling for "View Variant Details" */
+.view-details-button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  background-color: #f2f2f2;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.view-details-button:hover {
+  background-color: #e6e6e6;
+}
+
+/* SNP Details Section */
+.snp-details {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Table styling for SNP details */
+.snp-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.snp-details-table th, .snp-details-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.snp-details-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Loading and error message styling */
+.loading, .error-message {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 20px;
+}
+
+.error-message {
+  color: var(--error-color);
+}

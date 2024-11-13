@@ -1,0 +1,253 @@
+/* src/styles/PatientDetails.css */
+
+/* Container styling specific to the Patient Details page */
+.patient-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling for the page */
+.patient-details-container h2 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Patient info section */
+.patient-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.patient-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.patient-info p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Vital Signs Section */
+.vital-signs-section {
+  margin-top: 20px;
+}
+
+.vital-signs-section h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.vital-signs-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vital-signs-section ul li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vital-signs-section ul li p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Button Group Styling for Patient Actions */
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Specific Buttons Styling */
+.button-group button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styling (Edit Patient Details and Add Vital Signs) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Form inside modal */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content form label {
+  font-weight: 500;
+  color: #333;
+}
+
+.modal-content form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content form input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Submit and Cancel Button Styles within Modal */
+.modal-content form button[type="submit"] {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.modal-content form button[type="button"] {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content form button[type="button"]:hover {
+  background-color: #555;
+}
+
+/* Error message styling in modal */
+.error-message {
+  color: var(--error-color);
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* src/styles/PatientDetails.css */
+
+.upload-document-button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.upload-document-button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.modal-content form div {
+  margin-bottom: 15px;
+}
+
+.modal-content form textarea, .modal-content form select, .modal-content form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.error-message {
+  color: var(--error-color);
+  margin-top: 10px;
+}
+
+.upload-response {
+  color: var(--success-color);
+  margin-top: 10px;
+}

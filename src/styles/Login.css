@@ -1,0 +1,13 @@
+/* src/styles/Login.css */
+
+.login-page {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Optional: Style for error messages */
+.error-message {
+  color: var(--error-color);
+  margin-top: 10px;
+}
