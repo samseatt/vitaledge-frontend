@@ -1,10 +1,10 @@
-// src/pages/PhenomeXR.js
+// src/pages/GenomeXR.js
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { standardApi } from '../services/axios';
+import { standardApi } from '../../services/axios';
 import 'aframe';
 
-const PhenomeXR = () => {
+const GenomeXR = () => {
   const [patientData, setPatientData] = useState(null);
   const [searchParams] = useSearchParams();
   const patientId = searchParams.get('patientId'); // Get patient ID from URL query parameter
@@ -12,7 +12,9 @@ const PhenomeXR = () => {
   useEffect(() => {
     const fetchPatientGenomeData = async () => {
       try {
+        console.log(`Getting genomic data for patient 10`)
         const response = await standardApi.get(`/api/patients/${patientId}`);
+        console.log(`Done retrieving genomic data for patient 10`)
         setPatientData(response.data);
       } catch (err) {
         console.error('Error fetching genome data:', err);
@@ -32,7 +34,7 @@ const PhenomeXR = () => {
       <a-text
         value={`Genome Visualization for Patient ${patientId}`}
         position="0 2 -3"
-        color="#FFFFFF"
+        color="#FF0000"
         width="6"
         align="center"
       ></a-text>
@@ -40,20 +42,20 @@ const PhenomeXR = () => {
       {/* Check if patient data has loaded */}
       {patientData ? (
           <a-gltf-model
-          id="phenome-box"
-          src="/models/human_body.glb"
+          id="genome-box"
+          src="/models/chromosome_y.glb"
           position="0 1 -3"
-          scale="0.2 0.2 0.2"
+          scale="0.01 0.01 0.01"
           data-raycastable
           animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"
         >
-          <a-text value="Phenome Data Loaded" position="0 0.5 0" align="center" color="#FFFFFF"></a-text>
+          <a-text value="Genome Data Loaded" position="0 0.5 0" align="center" color="#FFFFFF"></a-text>
         </a-gltf-model>
       ) : (
-        <a-text value="Loading phenome data..." position="0 1 -3" color="yellow" width="4"></a-text>
+        <a-text value="Loading genome data..." position="0 1 -3" color="orange" width="4"></a-text>
       )}
     </a-scene>
   );
 };
 
-export default PhenomeXR;
+export default GenomeXR;

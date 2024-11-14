@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { standardApi } from '../services/axios';
+import { standardApi } from '../../services/axios';
 import 'aframe';
 
 const XRDashboard = () => {

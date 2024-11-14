@@ -10,11 +10,13 @@ import PrivateRoute from './components/PrivateRoute';
 import 'aframe';
 
 // New XR pages
-import XRLoginPage from './pages/XRLoginPage';
-import XRDashboard from './pages/XRDashboard';
-import PhenomeXR from './pages/PhenomeXR';
-import GenomeXR from './pages/GenomeXR';
-import ProteomeXR from './pages/ProteomeXR';
+import XRLoginPage from './xr/pages/XRLoginPage';
+import XRDashboard from './xr/pages/XRDashboard';
+import PhenomeXR from './xr/pages/PhenomeXR';
+import GenomeXR from './xr/pages/GenomeXR';
+import ProteomeXR from './xr/pages/ProteomeXR';
+import BloodGlucoseXR from './xr/pages/BloodGlucose';
+import TestXR from './xr/pages/TestXR';
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
         <Route path="/xr/phenome" element={<PrivateRoute><PhenomeXR /></PrivateRoute>} />
         <Route path="/xr/genome" element={<PrivateRoute><GenomeXR /></PrivateRoute>} />
         <Route path="/xr/proteome" element={<PrivateRoute><ProteomeXR /></PrivateRoute>} />
+        <Route path="/xr/glucose" element={<PrivateRoute><BloodGlucoseXR /></PrivateRoute>} />
+        <Route path="/xr/test" element={<PrivateRoute><TestXR /></PrivateRoute>} />
+        {/* <Route path="/xr/genome2" element={<PrivateRoute><GenomeXR /></PrivateRoute>} /> */}
 
         <Route path="*" element={<NotFound />} /> {/* Catch-all for undefined paths */}
       </Routes>
